@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--VisualizerViewController-->
+        <scene sceneID="g8L-wD-byl">
+            <objects>
+                <viewController storyboardIdentifier="VisualizerViewController" id="yq6-cr-QIV" userLabel="VisualizerViewController" customClass="VisualizerViewController" customModule="TBell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WKy-Be-g8i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eE5-7Q-cK9" userLabel="lblRadius">
+                                <rect key="frame" x="8" y="8" width="304" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-Cd-8KW" userLabel="segmentRadius">
+                                <rect key="frame" x="8" y="16" width="304" height="32"/>
+                                <segments>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentRadiusValueChanged:" destination="yq6-cr-QIV" eventType="valueChanged" id="0FP-Ji-Aac"/>
+                                </connections>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1c-86-QD6" userLabel="mapView">
+                                <rect key="frame" x="0.0" y="55" width="320" height="513"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oQ8-lF-8OI" firstAttribute="trailing" secondItem="ROH-Cd-8KW" secondAttribute="trailing" constant="8" id="3ta-SW-A2H"/>
+                            <constraint firstItem="oQ8-lF-8OI" firstAttribute="trailing" secondItem="eE5-7Q-cK9" secondAttribute="trailing" constant="8" id="Aah-iT-Y3R"/>
+                            <constraint firstItem="ROH-Cd-8KW" firstAttribute="top" secondItem="eE5-7Q-cK9" secondAttribute="bottom" constant="8" id="Gac-9R-MrU"/>
+                            <constraint firstItem="oQ8-lF-8OI" firstAttribute="bottom" secondItem="g1c-86-QD6" secondAttribute="bottom" id="ScH-NK-Exk"/>
+                            <constraint firstItem="eE5-7Q-cK9" firstAttribute="top" secondItem="oQ8-lF-8OI" secondAttribute="top" constant="8" id="ZtM-9G-yfP"/>
+                            <constraint firstItem="eE5-7Q-cK9" firstAttribute="leading" secondItem="oQ8-lF-8OI" secondAttribute="leading" constant="8" id="b8O-Wz-9xo"/>
+                            <constraint firstItem="g1c-86-QD6" firstAttribute="top" secondItem="ROH-Cd-8KW" secondAttribute="bottom" constant="8" symbolic="YES" id="iDm-oI-Jey"/>
+                            <constraint firstItem="oQ8-lF-8OI" firstAttribute="trailing" secondItem="g1c-86-QD6" secondAttribute="trailing" id="jUF-jb-Rqb"/>
+                            <constraint firstItem="ROH-Cd-8KW" firstAttribute="leading" secondItem="oQ8-lF-8OI" secondAttribute="leading" constant="8" id="ovn-nf-Ncm"/>
+                            <constraint firstItem="g1c-86-QD6" firstAttribute="leading" secondItem="oQ8-lF-8OI" secondAttribute="leading" id="vUw-IR-Sj0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oQ8-lF-8OI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Data Visualizer" id="amQ-a8-2ij">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="eag-T0-f4T">
+                            <connections>
+                                <action selector="btnBackTapped:" destination="yq6-cr-QIV" id="Qu0-hF-MbG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lblRadius" destination="eE5-7Q-cK9" id="tJV-ni-vcv"/>
+                        <outlet property="mapView" destination="g1c-86-QD6" id="DiN-Gv-VSI"/>
+                        <outlet property="segmentRadius" destination="ROH-Cd-8KW" id="ook-Gg-Jlt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTu-yN-R0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-21" y="119"/>
+        </scene>
+    </scenes>
+</document>

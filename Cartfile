@@ -1,0 +1,4 @@
+github "PromiseKit/CoreLocation" ~> 3.0
+github "mxcl/PromiseKit" ~> 6.8
+binary "https://ton.twimg.com/syndication/twitterkit/ios/TwitterKit.json"
+binary "https://ton.twimg.com/syndication/twitterkit/ios/TwitterCore.json"

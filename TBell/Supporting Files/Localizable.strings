@@ -1,0 +1,18 @@
+/* 
+ Localizable.strings
+ TBell
+ 
+ Created by Farhad on 2019-09-30.
+ Copyright © 2019 Farhad. All rights reserved.
+ */
+
+"Settings" = "Settings";
+"Searching in %@ around your current location" = "Searching in %@ around your current location";
+"Error" = "Error";
+"Cancel" = "Cancel";
+"OK" = "OK";
+"Please tap on Settings and authorize the app to acquire your current location" = "Please tap on Settings and authorize the app to acquire your current location";
+"No Tweets Found" = "No Tweets Found";
+"No tweets found around your current location. Try to widen your radius please" = "No tweets found around your current location. Try to widen your radius please";
+"Network error. Please try again" = "Network error. Please try again";
+"You're offline" = "You're offline";

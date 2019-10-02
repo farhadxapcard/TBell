@@ -1,0 +1,5 @@
+$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework
+$(SRCROOT)/Carthage/Build/iOS/PMKCoreLocation.framework
+$(SRCROOT)/Carthage/Build/iOS/TwitterCore.framework
+$(SRCROOT)/Carthage/Build/iOS/TwitterKit.framework
+

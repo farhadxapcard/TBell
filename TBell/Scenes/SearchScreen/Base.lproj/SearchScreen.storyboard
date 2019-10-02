@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchViewController-->
+        <scene sceneID="EFZ-17-zhm">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="61C-4K-GKy" userLabel="SearchViewController" customClass="SearchViewController" customModule="TBell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4qc-Fu-jTA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Keyword or Hashtag" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWD-1p-qdw" userLabel="searchBar">
+                                <rect key="frame" x="0.0" y="8" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jBd-Fm-sev"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-Rs-PuT" userLabel="containerView">
+                                <rect key="frame" x="0.0" y="52" width="320" height="516"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sWD-1p-qdw" firstAttribute="leading" secondItem="ncT-as-kqd" secondAttribute="leading" id="E6s-nJ-0yH"/>
+                            <constraint firstItem="ub2-Rs-PuT" firstAttribute="top" secondItem="sWD-1p-qdw" secondAttribute="bottom" symbolic="YES" id="G8q-7b-kfu"/>
+                            <constraint firstItem="ncT-as-kqd" firstAttribute="bottom" secondItem="ub2-Rs-PuT" secondAttribute="bottom" id="fAd-f0-q2S"/>
+                            <constraint firstItem="sWD-1p-qdw" firstAttribute="top" secondItem="ncT-as-kqd" secondAttribute="top" constant="8" id="sNm-TO-tzf"/>
+                            <constraint firstItem="ncT-as-kqd" firstAttribute="trailing" secondItem="ub2-Rs-PuT" secondAttribute="trailing" id="suR-sq-wc5"/>
+                            <constraint firstItem="ub2-Rs-PuT" firstAttribute="leading" secondItem="ncT-as-kqd" secondAttribute="leading" id="u7S-IF-xlv"/>
+                            <constraint firstItem="sWD-1p-qdw" firstAttribute="trailing" secondItem="ncT-as-kqd" secondAttribute="trailing" id="xsU-Qd-dJl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ncT-as-kqd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Tweets" id="5op-cg-Ys5">
+                        <barButtonItem key="rightBarButtonItem" image="btnDataVisualizer" id="EWh-ok-kLE" userLabel="btnDataVisualizer">
+                            <connections>
+                                <action selector="btnDataVisualizerTapped:" destination="61C-4K-GKy" id="bez-Cp-KCZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="ub2-Rs-PuT" id="Vm9-er-IlP"/>
+                        <outlet property="searchBar" destination="sWD-1p-qdw" id="5Cm-RJ-gcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSX-WB-wbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="71"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btnDataVisualizer" width="24" height="24"/>
+    </resources>
+</document>
